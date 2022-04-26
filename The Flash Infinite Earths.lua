@@ -1,4 +1,3 @@
---The Flash Infinite Earths
 if game.PlaceId == 3433421799 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("PrecHub: The Flash: Infinite Earths", "Ocean")
@@ -6,7 +5,7 @@ if game.PlaceId == 3433421799 then
     --Main
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
-    MainSection:NewButton("Kill All", "Kills everyone in the server!", function()F
+    MainSection:NewButton("Kill All", "Kills everyone in the server!", function()
         for _, v in pairs(game:GetService("Players"):GetPlayers()) do 
             if v ~= game:GetService("Players").LocalPlayer then
                 game:GetService("ReplicatedStorage").Events.AntiMonitor.InstantKill:FireServer(v.Character)
@@ -23,11 +22,15 @@ if game.PlaceId == 3433421799 then
     MainSection:NewButton("Stretch Punch", "A long arm punch!", function()
         game.ReplicatedStorage.Events.ElongatedMan.StretchArm:FireServer()
     end)
+    MainSection:NewLabel("The Thinker")
+    MainSection:NewButton("Vibration Blast", "Sends a blast of vibration knocking people back!", function()
+        game.ReplicatedStorage.Events.Thinker.VibrationBlast:FireServer()
+    end)
      
     --Player
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
-    PlayerSection:NewSlider("Speed", "Makes you go zoom.", 5000, 0, function(s) -- 5000 (MaxValue) | 0 (MinValue)
+    PlayerSection:NewSlider("Speed", "Makes you go zoom.", 5000, 16, function(s) -- 5000 (MaxValue) | 16 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
     PlayerSection:NewSlider("JumpPower", "A bit buggy at times, but should modify jump height.", 1000, 0, function(s) -- 1000 (MaxValue) | 0 (MinValue)
@@ -42,8 +45,8 @@ if game.PlaceId == 3433421799 then
     end)
     PlayerSection:NewButton("Heal", "Heals you back to full health!", function()
         for _, v in pairs(game:GetService("Players"):GetPlayers()) do 
-			if v ~= game:GetService("Players").LocalPlayer then
-				game:GetService("ReplicatedStorage").Events.AntiMonitor.Heal:FireServer(v.Character)
+            if v ~= game:GetService("Players").LocalPlayer then
+                game:GetService("ReplicatedStorage").Events.AntiMonitor.Heal:FireServer(v.Character)
             end
         end
     end)
@@ -65,33 +68,16 @@ if game.PlaceId == 3433421799 then
         game.ReplicatedStorage.Events.Vibe.VibePortal:FireServer()
     end)
     
-    
     --Credits
     local Credits = Window:NewTab("Credits")
     local CreditsSection = Credits:NewSection("Credits")
-
---No-Scope Arcade
-if game.PlaceId == 6407649031 then
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("PrecHub: No-Scope Arcade", "Ocean")
+    CreditsSection:NewLabel("UnbreakablePrec: UI maker and main scripter")
+    CreditsSection:NewLabel("HappyZealous: Functions scripter")
+    CreditsSection:NewLabel("HofZealous: Helper")
+    CreditsSection:NewLabel("UnbreakableNinj: The kill all method")
+    CreditsSection:NewLabel("ThirdDarkness: Cameo")
+    CreditsSection:NewLabel("This is a private script. Please do not leak this.")
     
-    --Main
-    local Main = Window:NewTab("Main")
-    local MainSection = Main:NewSection("Main")
-    MainSection:NewLabel("Triggerbot")
-    MainSection:NewToggle("Triggerbot", "Automatically clicks when an enemy is on your crosshair!", function(state)
-        if state then
-            print("Toggle On")
-        else
-            print("Toggle Off")
-        end
-    end)
-
-
-    --Visuals
-    local Visuals = Window:NewTab("Visuals")
-    local VisualsSection = Visuals:NewSection("ESP")
-
+    
+    
 end
-
-    
