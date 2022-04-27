@@ -67,6 +67,12 @@ if game.PlaceId == 3433421799 then
     MiscSection:NewButton("Vibe Portal", "Broke randomly lol.", function()
         game.ReplicatedStorage.Events.Vibe.VibePortal:FireServer()
     end)
+    MiscSection:NewButton("Teleport UI", "Allows you to teleport to specific locations!", function()
+        game:GetService("Players").LocalPlayer.PlayerGui.TeleportUI.Enabled = true
+    end)
+    MiscSection:NewKeybind("Toggle Hub", "Toggles the Hub!", Enum.KeyCode.LeftControl, function()
+        Library:ToggleUI()
+    end)
     
     --Credits
     local Credits = Window:NewTab("Credits")
