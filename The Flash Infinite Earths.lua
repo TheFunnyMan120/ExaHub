@@ -83,6 +83,9 @@ if game.PlaceId == 3433421799 then
     CreditsSection:NewLabel("UnbreakableNinj: The kill all method")
     CreditsSection:NewLabel("ThirdDarkness: Cameo")
     CreditsSection:NewLabel("This is a private script. Please do not leak this.")
+    local button = CreditsSection:NewButton("Discord Invite", "Copies the invite to the discord!", function()
+            setclipboard("https://discord.gg/PYxFtphzqg")
+            end)
     
     
     
