@@ -30,9 +30,10 @@ if game.PlaceId == 3433421799 then
     --Player
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
-    PlayerSection:NewSlider("Speed", "Makes you go zoom.", 5000, 16, function(s) -- 5000 (MaxValue) | 16 (MinValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end)
+    PlayerSection:NewTextBox("Speed", "Makes you go zoom!", function(txt)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = (txt)
+end)
+
     PlayerSection:NewSlider("JumpPower", "A bit buggy at times, but should modify jump height.", 1000, 0, function(s) -- 1000 (MaxValue) | 0 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
