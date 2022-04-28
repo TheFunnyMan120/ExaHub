@@ -6,17 +6,18 @@ if game.PlaceId == 3127396113 then
     --Main
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
-
-     --Visuals
-    local Visuals = Window:NewTab("Player")
-    local VisualsSection = Visuals:NewSection("Player")
-    PlayerSection:NewButton("Black Panther Blast", "Sends the Black Panther Blast!", function()
+   MainSection:NewButton("Black Panther Blast", "Sends the Black Panther Blast!", function()
         game.ReplicatedStorage.Characters.Avengers["Black Panther"].Functions.Blast:FireServer(40)
     end)
-   PlayerSection:NewButton("Spam Black Panther Blast", "Spams the Black Panther Blast!", function()
+    MainSection:NewButton("Spam Black Panther Blast", "Spams the Black Panther Blast!", function()
         while wait (0.2) do
             game.ReplicatedStorage.Characters.Avengers["Black Panther"].Functions.Blast:FireServer(40)
         end
     end)
+
+    --Player
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Visuals:NewSection("Player")
+    
     
 end
