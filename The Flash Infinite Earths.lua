@@ -33,7 +33,7 @@ if game.PlaceId == 3433421799 then
     PlayerSection:NewSlider("Speed", "Makes you go zoom.", 5000, 16, function(s) -- 5000 (MaxValue) | 16 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
-    PlayerSection:NewSlider("JumpPower", "A bit buggy at times, but should modify jump height.", 1000, 0, function(s) -- 1000 (MaxValue) | 0 (MinValue)
+    PlayerSection:NewSlider("JumpPower", "A bit buggy at times, but should modify jump height.", 1000, 50, function(s) -- 1000 (MaxValue) | 50 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
     PlayerSection:NewButton("Shield", "Puts a protective shield around you!", function()
