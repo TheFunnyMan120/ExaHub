@@ -1,5 +1,5 @@
 # PrecHub
-Exploits for various roblox games
+Exploits for various roblox games.
 Currently developed by:
 UnbreakablePrec, 
 I_AlwaysHappy, 
