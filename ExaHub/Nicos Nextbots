@@ -1,4 +1,4 @@
-if game.PlaceId == 3956818381 then
+if game.PlaceId == 10118559731 then
     local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
     local Window = VLib:Window("ExaHub", "Ninja Legends", "E")
 
