@@ -1,6 +1,6 @@
 if game.PlaceId == 10118559731 then
     local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
-    local Window = VLib:Window("ExaHub", "Nicos Nextbots", "E")
+    local Window = VLib:Window("ExaHub", "Nico's Nextbots", "E")
 
     local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
     local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
@@ -47,6 +47,33 @@ if game.PlaceId == 10118559731 then
             local minions = game.Players.LocalPlayer.Character.HumanoidRootPart
             local riseofgru = CFrame.new(Vector3.new(-96, 19, -18))
             minions.CFrame = riseofgru
+        end
+    end)
+    Main:Toggle("Fullbright",function(state)
+        if state then
+                local Light = game:GetService("Lighting")
+
+                function dofullbright()
+                Light.Ambient = Color3.new(1, 1, 1)
+                Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+                Light.ColorShift_Top = Color3.new(1, 1, 1)
+                end
+
+                dofullbright()
+
+                Light.LightingChanged:Connect(dofullbright)
+            else
+                local Light = game:GetService("Lighting")
+
+                function undofullbright()
+                Light.Ambient = Color3.new(26, 26, 26)
+                Light.ColorShift_Bottom = Color3.new(0, 0, 0)
+                Light.ColorShift_Top = Color3.new(149, 149, 149)
+                end
+
+                undofullbright()
+
+                Light.LightingChanged:Connect(dofullbright)
         end
     end)
 
