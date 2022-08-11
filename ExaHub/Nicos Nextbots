@@ -54,12 +54,12 @@ if game.PlaceId == 10118559731 then
         end
         if text == "Safe Zone 3" then
             local RootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-            local ThePosition = CFrame.new(Vector3.new(-301, 37.25, 56.5))
+            local ThePosition = CFrame.new(Vector3.new(293.11, 34.748, 53.8669))
             RootPart.CFrame = ThePosition
         end
         if text == "Safe Zone 4" then
             local RootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-            local ThePosition = CFrame.new(Vector3.new(-63, 37.5, 355.05))
+            local ThePosition = CFrame.new(Vector3.new(-72.4447, 37.348, 366.932))
             RootPart.CFrame = ThePosition
         end
         if text == "Safe Zone 5" then
