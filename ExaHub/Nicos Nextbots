@@ -232,6 +232,13 @@ if game.PlaceId == 10118559731 then
     Main:Button("Performance Mode", function()
         fpsEnchancer()
     end)
+    Main:Button("Open All Doors", function()
+        while task.wait(0.5) do
+            for i,v in next, workspace.doors:GetChildren() do
+                game.ReplicatedStorage.events.door:FireServer(v)
+            end
+         end
+    end)
 
     local Player = Window:Tab("Player")
     Player:Label("Player")
